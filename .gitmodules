@@ -1,0 +1,4 @@
+[submodule "joycontrol"]
+	path = joycontrol
+	url = https://github.com/Poohl/joycontrol.git
+	branch = amiibo_edits
