@@ -1,12 +1,13 @@
 #!/usr/bin/env python
 # encoding: utf-8
+import sys
+sys.path.append('./joycontrol/');
+
+from joycontrol.controller import Controller
+from joycontrol.server import create_hid_server
+from joycontrol.protocol import controller_protocol_factory
 from aiohttp import web, WSMsgType
 import os.path
-
-from joycontrol.protocol import controller_protocol_factory
-from joycontrol.server import create_hid_server
-from joycontrol.controller import Controller
-
 
 async def handle(request):
     text = '<meta http-equiv="refresh" content="0;url=./static/index.html">'
